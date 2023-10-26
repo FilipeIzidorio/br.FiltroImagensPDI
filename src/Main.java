@@ -15,6 +15,13 @@ public class Main {
     private JButton realceDeBordaBotao;
     private JButton suavizarBotao;
     private JButton binarizacaoBotao;
+    private JButton filtro1Botao;
+    private JButton filtro2Botao;
+    private JButton filtro3Botao;
+    private JButton filtro4Botao;
+    private JButton filtro5Botao;
+    private JButton filtro6Botao;
+    private JButton filtro7Botao;
     private BufferedImage imagem;
 
     public Main() {
@@ -34,11 +41,25 @@ public class Main {
         realceDeBordaBotao = new JButton("Realce de Borda");
         suavizarBotao = new JButton("Suavização");
         binarizacaoBotao = new JButton("Binarização");
+        filtro1Botao = new JButton("Filtro 1");
+        filtro2Botao = new JButton("Filtro 2");
+        filtro3Botao = new JButton("Filtro 3");
+        filtro4Botao = new JButton("Filtro 4");
+        filtro5Botao = new JButton("Filtro 5");
+        filtro6Botao = new JButton("Filtro 6");
+        filtro7Botao = new JButton("Filtro 7");
 
         barraDeBotoes.add(carregarImagem);
         barraDeBotoes.add(realceDeBordaBotao);
         barraDeBotoes.add(suavizarBotao);
         barraDeBotoes.add(binarizacaoBotao);
+        barraDeBotoes.add(filtro1Botao);
+        barraDeBotoes.add(filtro2Botao);
+        barraDeBotoes.add(filtro3Botao);
+        barraDeBotoes.add(filtro4Botao);
+        barraDeBotoes.add(filtro5Botao);
+        barraDeBotoes.add(filtro6Botao);
+        barraDeBotoes.add(filtro7Botao);
 
 
 
@@ -102,6 +123,111 @@ public class Main {
                     BufferedImage imagemSaida = null;
                     try {
                         imagemSaida = Filtros.binarizacao(imagem);
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    exibirImagem2(imagemSaida);
+                }
+
+            }
+        });
+        filtro1Botao.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (imagem != null) {
+                    BufferedImage imagemSaida = null;
+                    try {
+                        imagemSaida = Filtros.filter1(imagem);
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    exibirImagem2(imagemSaida);
+                }
+
+            }
+        });
+        filtro2Botao.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (imagem != null) {
+                    BufferedImage imagemSaida = null;
+                    try {
+                        imagemSaida = Filtros.filter2(imagem);
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    exibirImagem2(imagemSaida);
+                }
+
+            }
+        });
+        filtro3Botao.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (imagem != null) {
+                    BufferedImage imagemSaida = null;
+                    try {
+                        imagemSaida = Filtros.filter3(imagem);
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    exibirImagem2(imagemSaida);
+                }
+
+            }
+        });
+        filtro4Botao.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (imagem != null) {
+                    BufferedImage imagemSaida = null;
+                    try {
+                        imagemSaida = Filtros.filter4(imagem);
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    exibirImagem2(imagemSaida);
+                }
+
+            }
+        });
+        filtro5Botao.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (imagem != null) {
+                    BufferedImage imagemSaida = null;
+                    try {
+                        imagemSaida = Filtros.filter5(imagem);
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    exibirImagem2(imagemSaida);
+                }
+
+            }
+        });
+        filtro6Botao.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (imagem != null) {
+                    BufferedImage imagemSaida = null;
+                    try {
+                        imagemSaida = Filtros.filter6(imagem);
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    exibirImagem2(imagemSaida);
+                }
+
+            }
+        });
+        filtro7Botao.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (imagem != null) {
+                    BufferedImage imagemSaida = null;
+                    try {
+                        imagemSaida = Filtros.filter7(imagem);
                     } catch (IOException ex) {
                         throw new RuntimeException(ex);
                     }
